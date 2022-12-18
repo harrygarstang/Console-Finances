@@ -89,18 +89,25 @@ var finances = [
 
 var totalMonths = 0;
 var netTotal = 0;
+var totalProfitLossChange =0;
 
 // Calculating the total amount of months in the array and the total amount of money
 for (var i = 0; i < finances.length; i++) {
     totalMonths++;
     netTotal += finances[i][1];
+    if (i > 0) {
+        var change = (finances[i][1] - finances [i -1][1]);
+        totalProfitLossChange += change;
+    }
 
 }
+// Calculating average change in profit loss
+var ChangeAverage = (totalProfitLossChange / (totalMonths - 1));
 
 
 console.log('Total months:' + totalMonths);
 console.log('Net total profit/loss: $' + netTotal);
-
+console.log("Average change: $" + ChangeAverage);
 
 
 
