@@ -92,6 +92,8 @@ var netTotal = 0;
 var totalProfitLossChange = 0;
 var GreatestChange = 0;
 var dateOfGreatestChange = "";
+var GreatestDecrease = 0;
+var dateOfGreatestDecrease = "";
 
 // Calculating the total amount of months in the array and the total amount of money
 for (var i = 0; i < finances.length; i++) {
@@ -113,9 +115,13 @@ var ChangeAverage = (totalProfitLossChange / (totalMonths - 1));
 // Rounding the average change to the nearest 100th 
 ChangeAverage = Math.round(ChangeAverage * 100) / 100;
 
+// Change the rounded average to have 2 decimal places and be a string instead
+ChangeAverage = ChangeAverage.toFixed(2);
+
 console.log('Total months:' + totalMonths);
 console.log('Net total profit/loss: $' + netTotal);
 console.log("Average change: $" + ChangeAverage);
+console.log("Greatest Increase in Profits: " + dateOfGreatestChange + " ($" + GreatestChange + ")");
 
 
 
