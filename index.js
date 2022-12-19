@@ -107,6 +107,10 @@ for (var i = 0; i < finances.length; i++) {
         GreatestChange = change;
         dateOfGreatestChange = finances[i][0];
     }
+    if (change < GreatestDecrease) {
+        GreatestDecrease = change;
+        dateOfGreatestDecrease = finances[i][0];
+    }
 
 }
 // Calculating average change in profit loss
@@ -121,7 +125,7 @@ ChangeAverage = ChangeAverage.toFixed(2);
 console.log('Total months:' + totalMonths);
 console.log('Net total profit/loss: $' + netTotal);
 console.log("Average change: $" + ChangeAverage);
-console.log("Greatest Increase in Profits: " + dateOfGreatestChange + " ($" + GreatestChange + ")");
-
+console.log("Greatest increase in profits: " + dateOfGreatestChange + " ($" + GreatestChange + ")");
+console.log("Greatest decrease in profits: " + dateOfGreatestDecrease + " ($" + GreatestDecrease + ")");
 
 
