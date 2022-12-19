@@ -89,21 +89,29 @@ var finances = [
 
 var totalMonths = 0;
 var netTotal = 0;
-var totalProfitLossChange =0;
+var totalProfitLossChange = 0;
+var GreatestChange = 0;
+var dateOfGreatestChange = "";
 
 // Calculating the total amount of months in the array and the total amount of money
 for (var i = 0; i < finances.length; i++) {
     totalMonths++;
     netTotal += finances[i][1];
     if (i > 0) {
-        var change = (finances[i][1] - finances [i -1][1]);
+        var change = (finances[i][1] - finances[i - 1][1]);
         totalProfitLossChange += change;
+    }
+    if (change > GreatestChange) {
+        GreatestChange = change;
+        dateOfGreatestChange = finances[i][0];
     }
 
 }
 // Calculating average change in profit loss
 var ChangeAverage = (totalProfitLossChange / (totalMonths - 1));
 
+// Rounding the average change to the nearest 100th 
+ChangeAverage = Math.round(ChangeAverage * 100) / 100;
 
 console.log('Total months:' + totalMonths);
 console.log('Net total profit/loss: $' + netTotal);
