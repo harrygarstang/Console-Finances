@@ -1,4 +1,4 @@
-# Bootstrap-Portfolio (Bootcamp Challenge 3)
+# Console-Finances using Javascript (Bootcamp Challenge 4)
 
 ## Description 
 This javascript program processes a list of financial data from a company, including the month and the profit or loss for that month. It then calculates statistics including total number of months, net total profit and loss, average change in profit or loss, greatest increase and decrease in profit, in addition to the dates at which these occured. 
