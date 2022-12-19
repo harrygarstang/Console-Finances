@@ -5,8 +5,8 @@ This javascript program processes a list of financial data from a company, inclu
 
 ### How to use this program
 
-* Open the index.html file in the repository, this has a script tag in it linked to the index.js file containing the program. 
-* The output should be a series of lines printed to the console showing the aforementioned statistics. 
+* Go to the website page, this will be blank, and access the console through the developer tools of your browser. 
+* Link: https://harrygarstang.github.io/Console-Finances/
 
 Here is a screenshot of my project. 
 
